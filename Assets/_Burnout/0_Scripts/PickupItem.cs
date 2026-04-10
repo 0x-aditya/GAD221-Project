@@ -1,16 +1,20 @@
+using System;
 using UnityEngine;
 
 public class PickupItem : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private GameObject minigameCanvas;
+    private void OnCollisionExit2D(Collision2D other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if(other.gameObject.CompareTag("StudyObject"))
+        {
+            Destroy(other.gameObject);
+            minigameCanvas.SetActive(true);
+        }
+        else if (other.gameObject.CompareTag("LeisureObject"))
+        {
+            Destroy(other.gameObject);
+            StressMeter.Instance.UpdateStress(-0.2f);
+        }
     }
 }
