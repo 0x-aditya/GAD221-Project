@@ -4,7 +4,7 @@ using UnityEngine;
 public class PickupItem : MonoBehaviour
 {
     [SerializeField] private GameObject minigameCanvas;
-    private void OnCollisionExit2D(Collision2D other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
         if(other.gameObject.CompareTag("StudyObject"))
         {

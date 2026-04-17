@@ -33,6 +33,7 @@ public class FlipBitsManager : ScriptLibrary.Singletons.Singleton<FlipBitsManage
         gameObject.SetActive(false);
         minigameCanvas.SetActive(false);
         StressMeter.Instance.UpdateStress(0.2f);
+        GPAMeter.Instance.UpdateGPA(0.1f);
     }
 
     void Update()

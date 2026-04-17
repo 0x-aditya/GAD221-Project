@@ -8,8 +8,7 @@ public class RandomObjectFall : MonoBehaviour
     [SerializeField] private Transform fallPosX1;
     [SerializeField] private Transform fallPosX2;
     [SerializeField] private float spawnInterval = 0.5f;
-
-    public static float TotalGameTime = 10f;
+    [SerializeField] private float totalGameTime = 20f;
     
     void Start()
     {
@@ -19,7 +18,7 @@ public class RandomObjectFall : MonoBehaviour
     private IEnumerator FallObjects()
     {
         float elapsedTime = 0f;
-        while (elapsedTime < TotalGameTime)
+        while (elapsedTime < totalGameTime)
         {
             foreach (ObjectDetails details in objectDetails)
             {
