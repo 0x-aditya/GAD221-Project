@@ -6,6 +6,9 @@ TagManager:
   tags:
   - StudyObject
   - LeisureObject
+  - Wall
+  - Path
+  - HazardObject
   layers:
   - Default
   - TransparentFX

@@ -1587,7 +1587,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &213073419
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4263,6 +4263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupItem
   minigameCanvas: {fileID: 241346567}
+  minigames: []
 --- !u!1 &703268990
 GameObject:
   m_ObjectHideFlags: 0
@@ -11075,7 +11076,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1904088977
 RectTransform:
   m_ObjectHideFlags: 0

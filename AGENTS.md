@@ -1,14 +1,8 @@
 <!-- UNITY CODE ASSIST INSTRUCTIONS START -->
-- Project name: Burnout Game
+- Project name: GAD221-Project
 - Unity version: Unity 6000.4.0f1
-- Active scene:
-  - Name: Develop 1
-  - Tags:
-    - Untagged, Respawn, Finish, EditorOnly, MainCamera, Player, GameController, StudyObject, LeisureObject, Wall, Path
-  - Layers:
-    - Default, TransparentFX, Ignore Raycast, Water, UI
 - Active game object:
-  - Name: Odd 1 Out
-  - Tag: Untagged
-  - Layer: UI
+  - Name: Hazard 1
+  - Tag: StudyObject
+  - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->

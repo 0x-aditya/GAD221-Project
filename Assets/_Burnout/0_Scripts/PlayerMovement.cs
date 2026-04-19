@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using ScriptLibrary.Inputs;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private InputHandler inputHandler;
     private Rigidbody2D rb;
     private Camera mainCamera;
+    private SpriteRenderer spriteRenderer;
 
     void Start()
     {
@@ -27,6 +28,11 @@ public class PlayerMovement : MonoBehaviour
             Debug.LogError("No InputHandler Assigned to Player");
         if (mainCamera == null)
             Debug.LogError("No Main Camera Found.");
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
+        if (spriteRenderer == null)
+            Debug.LogError("No SpriteRenderer found on Player.");
     }
 
     void FixedUpdate()
@@ -37,6 +43,14 @@ public class PlayerMovement : MonoBehaviour
 
             float clampedX = Mathf.Clamp(worldTarget.x, xConstraint1.position.x, xConstraint2.position.x);
             Vector2 targetPos = new Vector2(clampedX, rb.position.y);
+
+            // 👇 FLIP LOGIC
+            float direction = targetPos.x - rb.position.x;
+
+            if (direction > 0.01f)
+                spriteRenderer.flipX = false; // facing right
+            else if (direction < -0.01f)
+                spriteRenderer.flipX = true;  // facing left
 
             rb.MovePosition(Vector2.Lerp(rb.position, targetPos, lerpSpeed * Time.fixedDeltaTime));
         }
