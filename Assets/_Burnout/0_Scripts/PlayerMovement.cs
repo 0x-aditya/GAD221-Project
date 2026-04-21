@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform xConstraint2;
 
     [Header("Movement Settings")]
-    [SerializeField] private float lerpSpeed = 1f;
+    public float lerpSpeed = 1f;
 
     private InputHandler inputHandler;
     private Rigidbody2D rb;

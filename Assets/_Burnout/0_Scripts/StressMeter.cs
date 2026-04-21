@@ -3,29 +3,29 @@ using UnityEngine;
 using UnityEngine.UI;
 public class StressMeter : ScriptLibrary.Singletons.Singleton<StressMeter>
 {
-    private Image stressBar;
+    private Image _stressBar;
     public Action OnStressMaxed;
     void Start()
     {
-        stressBar = GetComponent<Image>();
+        _stressBar = GetComponent<Image>();
     }
 
     /// <summary>
     /// Changes stress value
     /// </summary>
     /// <param name="stressValue"> value between 0 and 1 to be added or subtracted</param>
-    public void UpdateStress(float stressValue)
+    public void AddStress(float stressValue)
     {
         if (stressValue < 0)
         {
-            stressBar.fillAmount = Mathf.Max(0, stressBar.fillAmount + stressValue);
+            _stressBar.fillAmount = Mathf.Max(0, _stressBar.fillAmount + stressValue);
         }
         else
         {
-            stressBar.fillAmount = Mathf.Min(1, stressBar.fillAmount + stressValue);
+            _stressBar.fillAmount = Mathf.Min(1, _stressBar.fillAmount + stressValue);
         }
 
-        if (stressBar.fillAmount >= 1)
+        if (_stressBar.fillAmount >= 1)
         {
             OnStressMaxed?.Invoke();
         }

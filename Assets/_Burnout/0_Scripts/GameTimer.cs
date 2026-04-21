@@ -4,24 +4,29 @@ using UnityEngine.SceneManagement;
 
 public class GameTimer : MonoBehaviour
 {
-    [SerializeField] private float timerLength = 60f; // in seconds
+    public float timerLength = 60f; // in seconds
+    
     private TextMeshProUGUI timerText;
+    private float localTimer;
     void Start()
     {
         timerText = GetComponent<TextMeshProUGUI>();
+        localTimer = timerLength;
+        print(localTimer);
     }
 
-    private float localTimer = 0f;
     void Update()
     {
-        if (localTimer >= timerLength)
+        if (localTimer <= 0)
         {
-            timerText.text = $"{timerLength / 60:00}:{timerLength % 60:00}";
+            timerText.text = "00:00";
             TimerEnd();
             return;
         }
-        localTimer += Time.deltaTime;
-        timerText.text = $"{localTimer / 60:00}:{localTimer % 60:00}";
+        localTimer -= Time.deltaTime;
+        int seconds = Mathf.FloorToInt(localTimer);
+        int milliseconds = Mathf.FloorToInt((localTimer - seconds) * 100f);
+        timerText.text = $"{seconds:00}:{milliseconds:00}";
         
     }
 

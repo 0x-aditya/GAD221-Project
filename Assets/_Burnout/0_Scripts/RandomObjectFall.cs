@@ -8,10 +8,14 @@ public class RandomObjectFall : MonoBehaviour
     [SerializeField] private Transform fallPosX1;
     [SerializeField] private Transform fallPosX2;
     [SerializeField] private float spawnInterval = 0.5f;
-    [SerializeField] private float totalGameTime = 20f;
+    
+    private float totalGameTime;
+    private GameTimer gameTimer;
     
     void Start()
     {
+        gameTimer = FindAnyObjectByType<GameTimer>();
+        totalGameTime = gameTimer.timerLength;
         StartCoroutine(FallObjects());
     }
 
