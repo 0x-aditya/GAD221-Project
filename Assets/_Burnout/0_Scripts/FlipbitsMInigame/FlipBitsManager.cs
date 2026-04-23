@@ -31,7 +31,7 @@ public class FlipBitsManager : ScriptLibrary.Singletons.Singleton<FlipBitsManage
     {
         Debug.Log("You win!");
         gameObject.SetActive(false);
-        StressMeter.Instance.UpdateStress(0.2f);
+        StressMeter.Instance.AddStress(0.2f);
         GPAMeter.Instance.UpdateGPA(0.1f);
     }
 
