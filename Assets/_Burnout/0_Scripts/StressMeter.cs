@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class StressMeter : ScriptLibrary.Singletons.Singleton<StressMeter>
 {
@@ -8,6 +9,7 @@ public class StressMeter : ScriptLibrary.Singletons.Singleton<StressMeter>
     void Start()
     {
         _stressBar = GetComponent<Image>();
+        OnStressMaxed = () => { SceneManager.LoadScene("_Burnout/2_Scenes/LoseScreen"); };
     }
 
     /// <summary>

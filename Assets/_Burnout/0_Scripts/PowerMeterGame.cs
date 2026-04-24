@@ -4,6 +4,7 @@ using System;
 
 public class PowerMeterGame : MonoBehaviour
 {
+    [SerializeField] private GameObject prefab;
     [SerializeField] private Image progressBarImage;
     [SerializeField] private Image feedbackOverlay;
     [SerializeField] private MonoBehaviour statusText;
@@ -36,6 +37,7 @@ public class PowerMeterGame : MonoBehaviour
     void Start()
     {
         CacheTextColor();
+        PauseManager.Instance.PauseGame(true);
         StartMiniGame();
     }
     void Update()
@@ -125,6 +127,9 @@ public class PowerMeterGame : MonoBehaviour
         PlaySound(winSound);
         if (progressBarImage) progressBarImage.color = winColor;
         if (feedbackOverlay) feedbackOverlay.color = new Color(0, 1, 0, 0.2f);
+        PauseManager.Instance.PauseGame(false);
+        StressMeter.Instance.AddStress(0.2f);
+        GPAMeter.Instance.UpdateGPA(0.1f);
         OnGameWin?.Invoke(_currentPower);
         Invoke(nameof(CloseGame), 0.8f);
     }

@@ -7,6 +7,7 @@ public class PickupItem : MonoBehaviour
 {
     [SerializeField] private GameObject minigameCanvas;
     [SerializeField] private List<GameObject> minigames = new List<GameObject>();
+    [SerializeField] private GameObject minigameListCanvas;
     
     // Fatigue System
     [Header("Fatigue System")]
@@ -22,7 +23,7 @@ public class PickupItem : MonoBehaviour
     private void Start()
     {
         _playerMovement = FindAnyObjectByType<PlayerMovement>();
-        originalLerpSpeed = _playerMovement.lerpSpeed;
+        originalLerpSpeed = _playerMovement.moveSpeed;
     }
     
     private void OnCollisionEnter2D(Collision2D pickupItem)
@@ -41,6 +42,12 @@ public class PickupItem : MonoBehaviour
 
     private void StartMinigame()
     {
+        // minigames are children of minigameListCanvas, so we can just randomly activate one of them
+        minigames.Clear();
+        foreach (Transform minigame in minigameListCanvas.transform)
+        {
+            minigames.Add(minigame.gameObject);
+        }
         int randomIndex = Random.Range(0, minigames.Count);
         minigames[randomIndex].SetActive(true);
     }
@@ -78,13 +85,13 @@ public class PickupItem : MonoBehaviour
 
         if (isSlowed)
         {
-            _playerMovement.lerpSpeed = originalLerpSpeed / 1.5f;
+            _playerMovement.moveSpeed = originalLerpSpeed / 1.75f;
             fatigueVFXAnimator.SetTrigger("effectin");
         }
         else
         {
             if (originalLerpSpeed == 0f) return;
-            _playerMovement.lerpSpeed = originalLerpSpeed;
+            _playerMovement.moveSpeed = originalLerpSpeed;
             fatigueVFXAnimator.SetTrigger("effectout");
         }
         

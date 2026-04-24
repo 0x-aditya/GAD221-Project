@@ -1,6 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GPAMeter : ScriptLibrary.Singletons.Singleton<GPAMeter>
 {
@@ -9,6 +10,7 @@ public class GPAMeter : ScriptLibrary.Singletons.Singleton<GPAMeter>
     void Start()
     {
         GPABar = GetComponent<TextMeshProUGUI>();
+        OnGPAMaxed = () => { SceneManager.LoadScene("_Burnout/2_Scenes/WinScreen"); };
     }
     /// <summary>
     /// Changes stress value

@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameTimer : MonoBehaviour
+public class GameTimer : ScriptLibrary.Singletons.Singleton<GameTimer>
 {
     public float timerLength = 60f; // in seconds
     
@@ -33,5 +33,10 @@ public class GameTimer : MonoBehaviour
     void TimerEnd()
     {
         SceneManager.LoadScene("_Burnout/2_Scenes/MainMenu");
+    }
+
+    public void AddTime(float timeToAdd)
+    {
+        localTimer += timeToAdd;
     }
 }

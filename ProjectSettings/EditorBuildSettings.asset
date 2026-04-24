@@ -8,11 +8,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Burnout/2_Scenes/MainMenu.unity
     guid: ddda1c48574d4400eb2e74b7adfe6805
-  - enabled: 0
-    path: Assets/_Burnout/2_Scenes/Develop.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/_Burnout/2_Scenes/Develop 2.unity
-    guid: 288f13bcc694a5047b7e26d159cf6644
+    path: Assets/_Burnout/2_Scenes/Develop 1.unity
+    guid: d345684119c63af41a0f7b0128a766de
+  - enabled: 1
+    path: Assets/_Burnout/2_Scenes/LoseScreen.unity
+    guid: 7723271b3c1a2d7608125e24388bfcb2
+  - enabled: 1
+    path: Assets/_Burnout/2_Scenes/WinScreen.unity
+    guid: 675759820d73107ba99f00fa53f212b1
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

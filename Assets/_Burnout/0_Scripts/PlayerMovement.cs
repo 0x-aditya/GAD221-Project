@@ -2,14 +2,14 @@
 using ScriptLibrary.Inputs;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : ScriptLibrary.Inputs.Vector2Input
 {
     [Header("Movement Constraints")]
     [SerializeField] private Transform xConstraint1;
     [SerializeField] private Transform xConstraint2;
 
     [Header("Movement Settings")]
-    public float lerpSpeed = 1f;
+    public float moveSpeed = 1f;
 
     private InputHandler inputHandler;
     private Rigidbody2D rb;
@@ -37,22 +37,15 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (inputHandler.ClickActionValue > 0f)
-        {
-            Vector2 worldTarget = mainCamera.ScreenToWorldPoint(inputHandler.PointerLocationValue);
+        float inputX = VectorInput.x;
+        float targetX = rb.position.x + (inputX * moveSpeed * Time.fixedDeltaTime);
+        float clampedX = Mathf.Clamp(targetX, xConstraint1.position.x, xConstraint2.position.x);
 
-            float clampedX = Mathf.Clamp(worldTarget.x, xConstraint1.position.x, xConstraint2.position.x);
-            Vector2 targetPos = new Vector2(clampedX, rb.position.y);
+        if (inputX > 0.01f)
+            spriteRenderer.flipX = false;
+        else if (inputX < -0.01f)
+            spriteRenderer.flipX = true;
 
-            // 👇 FLIP LOGIC
-            float direction = targetPos.x - rb.position.x;
-
-            if (direction > 0.01f)
-                spriteRenderer.flipX = false; // facing right
-            else if (direction < -0.01f)
-                spriteRenderer.flipX = true;  // facing left
-
-            rb.MovePosition(Vector2.Lerp(rb.position, targetPos, lerpSpeed * Time.fixedDeltaTime));
-        }
+        rb.MovePosition(new Vector2(clampedX, rb.position.y));
     }
 }

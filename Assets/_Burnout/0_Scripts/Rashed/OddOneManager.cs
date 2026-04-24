@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class OddOneManager : MonoBehaviour
 {
+    public GameObject prefab;
     public Button[] buttons;
     public Sprite commonSprite;
     public Sprite oddSprite;
@@ -11,6 +12,7 @@ public class OddOneManager : MonoBehaviour
 
     void OnEnable()
     {
+        PauseManager.Instance.PauseGame(true);
         SetupGame();
     }
 
@@ -37,7 +39,11 @@ public class OddOneManager : MonoBehaviour
             Debug.Log("Correct");
 
             // Close minigame
-            gameObject.SetActive(false);
+            StressMeter.Instance.AddStress(0.2f);
+            GPAMeter.Instance.UpdateGPA(0.1f);
+            PauseManager.Instance.PauseGame(false);
+            Instantiate(prefab, transform.parent);
+            Destroy(gameObject);
             Time.timeScale = 1f;
         }
         else

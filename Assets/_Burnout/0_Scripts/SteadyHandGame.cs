@@ -64,7 +64,7 @@ public class SteadyHandGame : MonoBehaviour
             Image ballImage = playerBall.GetComponent<Image>();
             if (ballImage != null) ballImage.raycastTarget = true;
         }
-
+        PauseManager.Instance.PauseGame(true);
         StartMiniGame();
     }
 
@@ -207,11 +207,16 @@ public class SteadyHandGame : MonoBehaviour
     {
         _isGameActive = false;
         UpdateStatus("CLEARED!");
+        PauseManager.Instance.PauseGame(false);
+        GameTimer.Instance.AddTime(3f);
+        StressMeter.Instance.AddStress(0.2f);
+        GPAMeter.Instance.UpdateGPA(0.1f);
         SetTextAlpha(1f);
         PlaySound(winSound);
         if (feedbackOverlay) feedbackOverlay.color = new Color(0, 1, 0, 0.5f);
         OnGameWin?.Invoke();
         Invoke(nameof(CloseGame), 1.0f);
+
     }
 
     private System.Collections.IEnumerator ShakeEffect()
