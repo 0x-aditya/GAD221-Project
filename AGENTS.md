@@ -1,5 +1,5 @@
 <!-- UNITY CODE ASSIST INSTRUCTIONS START -->
-- Project name: Burnout Game
+- Project name: GAD221-Project
 - Unity version: Unity 6000.4.0f1
 - Active scene:
   - Name: Develop 1
