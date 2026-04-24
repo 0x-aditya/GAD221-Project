@@ -2897,6 +2897,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1653062270}
     m_Modifications:
+    - target: {fileID: 163555586367962864, guid: 3e14c70c92d7921e88624dcc8fbea954, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 163555586367962864, guid: 3e14c70c92d7921e88624dcc8fbea954, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7115904013785137633, guid: d7c91e8d23ee1be4894d77948aa60065, type: 3}
+    - target: {fileID: 163555586367962864, guid: 3e14c70c92d7921e88624dcc8fbea954, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 163555586367962864, guid: 3e14c70c92d7921e88624dcc8fbea954, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 163555586367962864, guid: 3e14c70c92d7921e88624dcc8fbea954, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1219818491857429294, guid: 3e14c70c92d7921e88624dcc8fbea954, type: 3}
       propertyPath: m_Name
       value: Booksminigame (1)
@@ -2905,6 +2925,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1614289798475038645, guid: 3e14c70c92d7921e88624dcc8fbea954, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1614289798475038645, guid: 3e14c70c92d7921e88624dcc8fbea954, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4031336077612466943, guid: d7c91e8d23ee1be4894d77948aa60065, type: 3}
     - target: {fileID: 1726969742535008750, guid: 3e14c70c92d7921e88624dcc8fbea954, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2985,6 +3013,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2749900447205926801, guid: 3e14c70c92d7921e88624dcc8fbea954, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2749900447205926801, guid: 3e14c70c92d7921e88624dcc8fbea954, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1504240474967396936, guid: d7c91e8d23ee1be4894d77948aa60065, type: 3}
+    - target: {fileID: 4006629744254093654, guid: 3e14c70c92d7921e88624dcc8fbea954, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4006629744254093654, guid: 3e14c70c92d7921e88624dcc8fbea954, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1504240474967396936, guid: d7c91e8d23ee1be4894d77948aa60065, type: 3}
+    - target: {fileID: 6155543539408503541, guid: 3e14c70c92d7921e88624dcc8fbea954, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6155543539408503541, guid: 3e14c70c92d7921e88624dcc8fbea954, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7115904013785137633, guid: d7c91e8d23ee1be4894d77948aa60065, type: 3}
+    - target: {fileID: 6155543539408503541, guid: 3e14c70c92d7921e88624dcc8fbea954, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6155543539408503541, guid: 3e14c70c92d7921e88624dcc8fbea954, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6155543539408503541, guid: 3e14c70c92d7921e88624dcc8fbea954, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374021711190220681, guid: 3e14c70c92d7921e88624dcc8fbea954, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374021711190220681, guid: 3e14c70c92d7921e88624dcc8fbea954, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4031336077612466943, guid: d7c91e8d23ee1be4894d77948aa60065, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
