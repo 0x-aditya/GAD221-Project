@@ -2,7 +2,7 @@
 - Project name: GAD221-Project
 - Unity version: Unity 6000.4.0f1
 - Active game object:
-  - Name: Odd 1 Out
+  - Name: ObjectFallManager
   - Tag: Untagged
-  - Layer: UI
+  - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
