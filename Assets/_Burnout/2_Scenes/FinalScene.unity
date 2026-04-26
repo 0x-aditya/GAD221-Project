@@ -2110,6 +2110,9 @@ MonoBehaviour:
   minigames:
   - {fileID: 3115089551073162075}
   - {fileID: 7951323554674878957}
+  - {fileID: 1641775780}
+  - {fileID: 1779642795}
+  - {fileID: 5805191621798822465}
   minigameListCanvas: {fileID: 1653062269}
   fatigueIncreaseAmount: 0.1
   fatigeDecrementRate: 0.01
@@ -3033,7 +3036,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1219818491857429294, guid: 3e14c70c92d7921e88624dcc8fbea954, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1614289798475038645, guid: 3e14c70c92d7921e88624dcc8fbea954, type: 3}
       propertyPath: m_Type
@@ -3796,6 +3799,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1641775780 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1219818491857429294, guid: 3e14c70c92d7921e88624dcc8fbea954, type: 3}
+  m_PrefabInstance: {fileID: 1278795081}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1653062269
 GameObject:
   m_ObjectHideFlags: 0
@@ -3986,6 +3994,11 @@ Transform:
   - {fileID: 478879166}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1779642795 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7606596839196795087, guid: 49a19dda3eaf224e980b408326afacaf, type: 3}
+  m_PrefabInstance: {fileID: 373916319}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1905597141
 GameObject:
   m_ObjectHideFlags: 0
