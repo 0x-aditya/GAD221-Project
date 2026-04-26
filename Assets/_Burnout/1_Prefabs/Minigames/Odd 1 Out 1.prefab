@@ -4933,7 +4933,7 @@ GameObject:
   - component: {fileID: 3059108733797080904}
   - component: {fileID: 7899641277374724863}
   m_Layer: 5
-  m_Name: Odd 1 Out
+  m_Name: Odd 1 Out 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5063,7 +5063,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99c0f3177c4fb634fbfb1b33ffc0da74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OddOneManager
-  prefab: {fileID: 7606596839196795087, guid: 76fabfcb1ff83aa0aa51416b699f6e66, type: 3}
+  prefab: {fileID: 7606596839196795087, guid: 49a19dda3eaf224e980b408326afacaf, type: 3}
   buttons:
   - {fileID: 8126244678869869369}
   - {fileID: 4786143125710405474}

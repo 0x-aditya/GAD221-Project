@@ -42,8 +42,8 @@ public class OddOneManager : MonoBehaviour
             StressMeter.Instance.AddStress(0.2f);
             GPAMeter.Instance.UpdateGPA(0.1f);
             PauseManager.Instance.PauseGame(false);
-            Instantiate(prefab, transform.parent);
             Destroy(gameObject);
+            Instantiate(prefab, transform.parent);
             Time.timeScale = 1f;
         }
         else

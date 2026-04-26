@@ -85,7 +85,7 @@ public class PickupItem : MonoBehaviour
 
         if (isSlowed)
         {
-            _playerMovement.moveSpeed = originalLerpSpeed / 1.75f;
+            _playerMovement.moveSpeed = originalLerpSpeed / 2.25f;
             fatigueVFXAnimator.SetTrigger("effectin");
         }
         else

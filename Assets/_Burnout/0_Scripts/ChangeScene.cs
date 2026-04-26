@@ -5,7 +5,7 @@ public class ChangeScene : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("_Burnout/2_Scenes/Develop 1");
+        SceneManager.LoadScene("_Burnout/2_Scenes/FinalScene");
     }
 
 }

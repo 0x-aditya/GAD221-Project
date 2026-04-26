@@ -171,6 +171,7 @@ public class SteadyHandGame : MonoBehaviour
 
     private void ResetBallToStart()
     {
+        _gameWon = true;
         _isRestarting = false;
         _isDragging = false;
         transform.localPosition = _originalPanelPos;
@@ -203,8 +204,10 @@ public class SteadyHandGame : MonoBehaviour
         }
     }
 
+    private bool _gameWon = true;
     private void WinGame()
     {
+        if (!_gameWon) return;
         _isGameActive = false;
         UpdateStatus("CLEARED!");
         PauseManager.Instance.PauseGame(false);
@@ -216,7 +219,7 @@ public class SteadyHandGame : MonoBehaviour
         if (feedbackOverlay) feedbackOverlay.color = new Color(0, 1, 0, 0.5f);
         OnGameWin?.Invoke();
         Invoke(nameof(CloseGame), 1.0f);
-
+        _gameWon = false;
     }
 
     private System.Collections.IEnumerator ShakeEffect()

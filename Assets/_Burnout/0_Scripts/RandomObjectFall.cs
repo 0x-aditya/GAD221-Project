@@ -1,5 +1,7 @@
+using System;
 using UnityEngine;
 using System.Collections;
+using Random = UnityEngine.Random;
 
 
 public class RandomObjectFall : MonoBehaviour
@@ -12,11 +14,16 @@ public class RandomObjectFall : MonoBehaviour
     private float totalGameTime;
     private GameTimer gameTimer;
     
-    void Start()
+    void OnEnable()
     {
         gameTimer = FindAnyObjectByType<GameTimer>();
         totalGameTime = gameTimer.timerLength;
         StartCoroutine(FallObjects());
+    }
+
+    private void OnDisable()
+    {
+        StopAllCoroutines();
     }
 
     private IEnumerator FallObjects()
