@@ -17,6 +17,7 @@ which reduces the movement speed and the effect of leisure items.
 - Burnout State: At 100% stress, player loses and fails.
 - Self-Care Items: Reduce stress and help maintain performance.
 - Fatigue: Over use of self care items may cause fatigue to increase resulting in decreased effectiveness of self care items.
+<img width="1232" height="690" alt="image" src="https://github.com/user-attachments/assets/eebcdb61-3614-49a4-9e54-b6f95ef6ad5f" />
 
 ## Design Intent
 The mechanics are designed to directly reflect the experience of academic burnout:
